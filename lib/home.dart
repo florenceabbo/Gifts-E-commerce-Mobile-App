@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_3/categories.dart';
 import 'package:flutter_application_3/item_categories.dart';
 import 'package:flutter_application_3/popular_items.dart';
-
+import 'package:flutter_application_3/categories_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key});
@@ -35,20 +35,37 @@ class HomePage extends StatelessWidget {
                         // color: Colors.red, // Set badgeColor here
 
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                             // Navigate to CategoriesPage when Categories is clicked
+                             Navigator.push(
+                             context,
+                             MaterialPageRoute(builder: (context) => CategoriesPage()),
+                              );
+                          },
+           child: InkWell(
+                          onTap: () {
+                             
+             
+              // Navigate to the Categories page
+              Navigator.push(context, MaterialPageRoute(builder: (context) => CategoriesPage()));
+            },
+                          
+                          
                           child: Icon(
-                           
+                            
                             Icons.shopping_cart,
                             size: 30,
-                           
                             color: Colors.black,
                           ),
                         ),
+                        ),
                       ),
                     ),
+                    
                   ],
                 ),
               ),
+            
               // welcome
               Container(
                 alignment: Alignment.centerLeft,

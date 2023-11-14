@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_3/login.dart';
 
 
+
 void main()=>
   runApp(MaterialApp(
     home: SplashScreen(),
@@ -304,81 +305,4 @@ Center(
       ),  );
   }
 }
-
-//   class MyForm extends StatelessWidget {  
-//   @override  
-//   Widget build(BuildContext context) {  
-  
-//     return MaterialApp(  
- 
-//       home: Scaffold(  
-//         appBar: AppBar(  
-//           title: Text('Log In',textAlign: TextAlign.right,),  
-//           backgroundColor: Colors.purple[900],
-//         ),  
-//         body: LogIn(),  
-//       ),  
-//     );  
-//   }  
-// }  
-// Create a Form widget.  
-// class MyCustomForm extends StatefulWidget {  
-//   @override  
-//   MyCustomFormState createState() {  
-//     return MyCustomFormState();  
-//   }  
-// }  
-// Create a corresponding State class. This class holds data related to the form.  
-// class MyCustomFormState extends State<LogIn> {  
-//   // Create a global key that uniquely identifies the Form widget  
-//   // and allows validation of the form.  
-//   final _formKey = GlobalKey<FormState>();  
-  
-//   @override  
-//   Widget build(BuildContext context) {  
-//     // Build a Form widget using the _formKey created above.  
-//     return Form(  
-//       key: _formKey,  
-//       child: Column(  
-//         crossAxisAlignment: CrossAxisAlignment.start,  
-//         children: <Widget>[  
-//           TextFormField(  
-//             decoration: const InputDecoration(  
-//               icon: const Icon(Icons.person),  
-//               hintText: 'Enter your Username',  
-//               labelText: 'UserName',  
-//             ),  
-//           ),  
-//           TextFormField(  
-//             decoration: const InputDecoration(  
-//               icon: const Icon(Icons.password),  
-//               hintText: 'Enter a  password',  
-//               labelText: 'Password',  
-//             ),  
-//           ),  
-          
-//            Container(  
-//               padding: const EdgeInsets.only(left: 150.0, top: 40.0),  
-//               child: TextButton(  
-//                 style: ButtonStyle(
-//               backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 77, 57, 207)),
-//              ), 
-//                 child:  Text('Submit',
-//                 style: TextStyle(
-//                   color: Colors.white,
-//                 ),), 
-               
-//                   onPressed:(){
-//                      Navigator.push(
-//     context,
-//     MaterialPageRoute(builder: (context) =>  OnboardingScreen2()),);
-//                   },  
-//               )),  
-//         ],  
-//       ),  
-//     );  
-//   }  
-// }  
-
-
 

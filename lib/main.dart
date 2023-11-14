@@ -11,6 +11,7 @@ import 'package:flutter_application_3/splash.dart';
 
 void main(){
   runApp(MaterialApp(
+    debugShowCheckedModeBanner:false,
     home:SplashScreen(), 
           // const SignUp(),
     //  home:HomePage(), 

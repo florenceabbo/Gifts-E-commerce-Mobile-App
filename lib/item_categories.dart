@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/categories_page.dart';
+
 
 
 class Items extends StatelessWidget {
@@ -62,17 +64,13 @@ class Items extends StatelessWidget {
                       onTap: () {},
                       child: Container(
                         margin: EdgeInsets.all(10),
-                        // child: Image.asset(
-                        //   "images/$i.jpg",
-                        //   fit: BoxFit.contain,
-                        // ),
+                        
                       ),
                     ),
                         Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
        children:<Widget>[
-         // Padding(padding: EdgeInsets.fromLTRB(10, 20, 10, 20))
-         // ,
+        
        
          ElevatedButton(onPressed: (){Navigator.pop(context);},
       
@@ -84,27 +82,27 @@ class Items extends StatelessWidget {
         backgroundColor: const MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7)),
         ),
          ),
-  //       ElevatedButton(
+        ElevatedButton(
          
-  //              onPressed:()
-  //             {
-  //             Navigator.push(
-  //    context,
-  //    MaterialPageRoute(builder: (context) =>  PopularItems()),
-  //  );
+               onPressed:()
+              {
+              Navigator.push(
+     context,
+     MaterialPageRoute(builder: (context) =>  CategoriesPage()),
+   );
 
-  //             },
-  //             child: Text('Next',
-  //             style: TextStyle(
+              },
+              child: Text('Go to Categories',
+              style: TextStyle(
            
         
-  //              color: Colors.white
-  //             ), ),
-  //            style: ButtonStyle(
-  //              backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7))
-  //             ),
+               color: Colors.white
+              ), ),
+             style: ButtonStyle(
+               backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7))
+              ),
                  
-  //                 ),
+                  ),
    ],),
                     Padding(
                       padding: EdgeInsets.only(bottom: 8),
@@ -115,54 +113,10 @@ class Items extends StatelessWidget {
                           width: 700,
                         ),
                         alignment: Alignment.centerLeft,
-                        // child: Text(
-                        //   "Text title",
-                        //   style: TextStyle(
-                        //     fontSize: 15,
-                        //     fontWeight: FontWeight.bold,
-                        //     color: Colors.black,
-                        //   ),
-                          
-                        // ),
+                       
                       ),
                     ),
-  //                  Row(
-  //      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  //     children:<Widget>[
-  //       // Padding(padding: EdgeInsets.fromLTRB(10, 20, 10, 20))
-  //       // ,
-       
-  //       ElevatedButton(onPressed: (){Navigator.pop(context);},
-      
-  //      child: Text('Previous',
-  //      style: TextStyle(
-  //       color: Colors.white,
-  //      ),),
-  //      style:ButtonStyle(
-  //      backgroundColor: const MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7)),
-  //      ),
-  //       ),
-  //      ElevatedButton(
-         
-  //             onPressed:()
-  //            {
-  //            Navigator.push(
-  //   context,
-  //   MaterialPageRoute(builder: (context) =>  PopularItems()),
-  // );
-
-  //            },
-  //            child: Text('Next',
-  //            style: TextStyle(
-           
-        
-  //             color: Colors.white
-  //            ), ),
-  //           style: ButtonStyle(
-  //             backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7))
-  //            ),
-                 
-  //                ),],),
+  
                   ],
                   
                 ),

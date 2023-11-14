@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/home.dart';
-// void main(){
-//   runApp(MaterialApp(),
-//   ); 
-// }
+import 'package:flutter_application_3/login.dart';
+
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
 
@@ -27,10 +24,8 @@ class SignUp extends StatelessWidget {
         children: [
           // Image.asset("assets/images/vale.png", width:50 , height: 70,),
           
-          Text(" LogIn",style: TextStyle(fontSize: 22, color: Colors.black),),
-          // Text("Enter Email", style: TextStyle(fontSize: 12, color: Color.fromARGB(255, 255, 230, 7)),),
-          // Text("Enter Password", style: TextStyle(fontSize: 12, color: Color.fromARGB(255, 255, 230, 7)),),
-          // Text("Don't have an account, SignUp", style: TextStyle( fontSize: 12, color: Color.fromARGB(255, 255, 230, 7)),),
+          Text(" SignUp",style: TextStyle(fontSize: 22, color: Colors.black),),
+       
           TextField(
             decoration: InputDecoration(
               hintText: ("Enter your Surname")
@@ -62,69 +57,22 @@ class SignUp extends StatelessWidget {
           ),
           
           
-         ElevatedButton(onPressed: (){
-         print("SignUp clicked");
-         }, child: Text("SignUp", style: TextStyle(color:Colors.black, )),
-         style: ButtonStyle(
-    backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 255, 135, 7)), // Change the color to your desired background color
-  )),
-         TextButton(onPressed: (){
-          print("Already SignUp clicked");
-         }, child: Text("Already Signed Up?", style: TextStyle(color: Colors.black),)),
+
           ElevatedButton(
   onPressed: () {
     print("Now LogIn clicked");
+    Navigator.push(context, MaterialPageRoute(builder: (context) => LogIn()));
   },
   child: Text("Now LogIn", style: TextStyle(color: Colors.black)),
   style: ButtonStyle(
     backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 255, 135, 7)), // Change the color to your desired background color
   ),
 ),
-  Row(
-       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children:<Widget>[
-        // Padding(padding: EdgeInsets.fromLTRB(10, 20, 10, 20))
-        // ,
-       
-        ElevatedButton(onPressed: (){Navigator.pop(context);},
-      
-       child: Text('Previous',
-       style: TextStyle(
-        color: Colors.black,
-       ),),
-       style:ButtonStyle(
-       backgroundColor: const MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7)),
-       ),
-        ),
-       ElevatedButton(
-         
-              onPressed:()
-             {
-             Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) =>  HomePage()),
-  );
-
-             },
-             child: Text('Next',
-             style: TextStyle(
-           
-        
-              color: Colors.black
-             ), ),
-            style: ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7))
-             ),
-                 
-                 ),],),
-        ],
+          ],
       ),
               
   
-//  floatingActionButton:FloatingActionButton(onPressed: null, 
-//          child: const Text("SignUp", style: TextStyle(color: Colors.black),),
-//          backgroundColor: const Color.fromARGB(255, 255, 238, 7),
-//  ),
+
     );
   
     

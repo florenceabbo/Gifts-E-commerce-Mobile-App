@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_3/categories_page.dart';
 
 class Categories extends StatelessWidget {
-  const Categories({super.key});
+  const Categories({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,28 +13,36 @@ class Categories extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Category",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
+              InkWell(
+                onTap: () {
+                  // Navigate to CategoriesPage when Categories is clicked
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CategoriesPage()),
+                  );
+                },
+                child: Text(
+                  'Categories',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold, // Change the color as per your design
+                  ),
                 ),
               ),
+             
               Text(
                 "See All",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
-                
                 ),
               )
             ],
           ),
         ),
         SingleChildScrollView(
-          // 50 rows
           scrollDirection: Axis.horizontal,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -64,7 +72,6 @@ class Categories extends StatelessWidget {
                           width: 100,
                         ),
                       ),
-// padding
                       Padding(
                         padding: EdgeInsets.only(right: 5),
                         child: Text(
@@ -76,53 +83,12 @@ class Categories extends StatelessWidget {
                         ),
                       )
                     ],
-                    
                   ),
                 )
             ],
           ),
         ),
-  //       Row(
-  //      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  //     children:<Widget>[
-  //       // Padding(padding: EdgeInsets.fromLTRB(10, 20, 10, 20))
-  //       // ,
-       
-  //       ElevatedButton(onPressed: (){Navigator.pop(context);},
-      
-  //      child: Text('Previous',
-  //      style: TextStyle(
-  //       color: Colors.white,
-  //      ),),
-  //      style:ButtonStyle(
-  //      backgroundColor: const MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7)),
-  //      ),
-  //       ),
-  //      ElevatedButton(
-         
-  //             onPressed:()
-  //            {
-  //            Navigator.push(
-  //   context,
-  //   MaterialPageRoute(builder: (context) =>  Items()),
-  // );
-
-  //            },
-  //            child: Text('Next',
-  //            style: TextStyle(
-           
-        
-  //             color: Colors.white
-  //            ), ),
-  //           style: ButtonStyle(
-  //             backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7))
-  //            ),
-                 
-  //                ),],),
       ],
-      
     );
-    
   }
 }
-

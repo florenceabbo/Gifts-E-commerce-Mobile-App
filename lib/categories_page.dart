@@ -100,7 +100,7 @@ class ItemCard extends StatelessWidget {
           Image.asset(
            "assets/images/ha.png",
             fit: BoxFit.cover,
-            height: 450.0,
+            height: 90,
             
           ),
           Padding(

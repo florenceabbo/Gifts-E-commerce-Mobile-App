@@ -92,7 +92,7 @@ class Items extends StatelessWidget {
    );
 
               },
-              child: Text('Go to Categories',
+              child: Text('To Categories',
               style: TextStyle(
            
         
@@ -109,8 +109,8 @@ class Items extends StatelessWidget {
                       child: Container(
                           child: Image.asset(
                           "assets/images/7457654aeea36c13b77fcda820172ede (1).gif",
-                          height: 500,
-                          width: 700,
+                          height: 100,
+                          width: 150,
                         ),
                         alignment: Alignment.centerLeft,
                        

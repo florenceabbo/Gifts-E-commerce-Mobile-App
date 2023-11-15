@@ -59,18 +59,6 @@ class _HomeState extends State<SplashScreen> {
               
           
            
-            //   Center(
-            //     child:  Text(
-            //  "Love BloosomsStore",
-            //  style: TextStyle(
-            //   fontSize: 26,
-            //   fontWeight: FontWeight.w400,
-            //   fontFamily: 'condensed',
-              
-            //   color: Color.fromARGB(255, 77, 57, 207),
-            //  ) ,
-            // ),
-            // ),
           
             ],
                  
@@ -86,13 +74,7 @@ class _HomeState extends State<SplashScreen> {
         
       
       
-    //   appBar: AppBar(
-    //     title: Text('HELLO'),
-        
-    //   ),
-    //  body: Center(
-    //   child: Text('helloworld'),
-    //  ),
+  
     
   }}
 
@@ -103,13 +85,13 @@ class _HomeState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Color.fromARGB(255, 248, 227, 205),
+      
     appBar: AppBar(
       
       title: Text("LOVE BLOOSOMS GIFT STORE", style: TextStyle(color: Colors.black),),
       backgroundColor: Color.fromARGB(255, 255, 135, 7),
     ),
-      
+      backgroundColor:Color.fromARGB(255, 251, 223, 193),
       body:Center( 
         
          child:  Center(
@@ -210,7 +192,7 @@ class _HomeState extends State<SplashScreen> {
         title: Text("LOVE BLOOSOMS STORE", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
         backgroundColor: Color.fromARGB(255, 255, 135, 7),
       ),
-    backgroundColor: Color.fromARGB(255, 248, 227, 205),
+    backgroundColor: Color.fromARGB(255, 253, 226, 197),
     
     body: SafeArea(child:
 Center(
@@ -306,3 +288,4 @@ Center(
   }
 }
 
+ 

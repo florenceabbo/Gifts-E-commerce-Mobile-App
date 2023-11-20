@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/categories_page.dart';
 
-
-
 class Items extends StatelessWidget {
-  const Items({super.key});
+   Items({super.key});
+
+  // Defined a list of image paths
+  final List<String> imagePaths = [
+    "assets/images/7457654aeea36c13b77fcda820172ede (1).gif",
+    "assets/images/he.png",
+    "assets/images/1-removebg-preview.png",
+    "assets/images/3-removebg-preview.png",
+    "assets/images/4-removebg-preview.png",
+    "assets/images/5-removebg-preview.png",
+    "assets/images/9-removebg-preview.png",
+    "assets/images/4-removebg-preview.png",
+    "assets/images/7457654aeea36c13b77fcda820172ede (1).gif",
+    "assets/images/3-removebg-preview.png",
+    "assets/images/he.png",
+    "assets/images/3331-removebg-preview.png"
+    // Adding more image paths as needed
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +58,7 @@ class Items extends StatelessWidget {
           childAspectRatio: 0.8,
           shrinkWrap: true,
           children: [
-            for (int i = 1; i < 9; i++)
+            for (String imagePath in imagePaths)
               Container(
                 height: 20,
                 padding: EdgeInsets.symmetric(horizontal: 5),
@@ -64,70 +79,65 @@ class Items extends StatelessWidget {
                       onTap: () {},
                       child: Container(
                         margin: EdgeInsets.all(10),
-                        
                       ),
                     ),
-                        Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-       children:<Widget>[
-        
-       
-         ElevatedButton(onPressed: (){Navigator.pop(context);},
-      
-        child: Text('Previous',
-        style: TextStyle(
-         color: Colors.white,
-        ),),
-        style:ButtonStyle(
-        backgroundColor: const MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7)),
-        ),
-         ),
-        ElevatedButton(
-         
-               onPressed:()
-              {
-              Navigator.push(
-     context,
-     MaterialPageRoute(builder: (context) =>  CategoriesPage()),
-   );
-
-              },
-              child: Text('To Categories',
-              style: TextStyle(
-           
-        
-               color: Colors.white
-              ), ),
-             style: ButtonStyle(
-               backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 255, 135, 7))
-              ),
-                 
-                  ),
-   ],),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            'Previous',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          style: ButtonStyle(
+                            backgroundColor: const MaterialStatePropertyAll(
+                                Color.fromARGB(255, 255, 135, 7)),
+                          ),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CategoriesPage(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            'To Categories',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Color.fromARGB(255, 255, 135, 7)),
+                          ),
+                        ),
+                      ],
+                    ),
                     Padding(
                       padding: EdgeInsets.only(bottom: 8),
                       child: Container(
-                          child: Image.asset(
-                          "assets/images/7457654aeea36c13b77fcda820172ede (1).gif",
+                        child: Image.asset(
+                          imagePath,
                           height: 100,
                           width: 150,
                         ),
                         alignment: Alignment.centerLeft,
-                       
                       ),
                     ),
-  
                   ],
-                  
                 ),
               ),
           ],
-          
-        )
-        
+        ),
       ],
-      
     );
-                  
   }
 }

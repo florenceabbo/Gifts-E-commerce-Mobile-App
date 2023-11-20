@@ -1,8 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/categories_page.dart';
 
+class CategoryInfo {
+  final String imagePath;
+  final String categoryName;
+
+  CategoryInfo({required this.imagePath, required this.categoryName});
+}
+
 class Categories extends StatelessWidget {
-  const Categories({Key? key});
+  final List<CategoryInfo> categories = [
+    CategoryInfo(imagePath: "assets/images/3331-removebg-preview.png", categoryName: "Material Gifts"),
+    CategoryInfo(imagePath: "assets/images/5-removebg-preview.png", categoryName: "Wedding Gifts"),
+    CategoryInfo(imagePath: "assets/images/7457654aeea36c13b77fcda820172ede (1).gif", categoryName: "Birthday Gifts"),
+    CategoryInfo(imagePath: "assets/images/3-removebg-preview.png", categoryName: "Casual Gifts"),
+    // Add more categories as needed
+  ];
+
+         Categories({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +45,6 @@ class Categories extends StatelessWidget {
                   ),
                 ),
               ),
-             
               Text(
                 "See All",
                 style: TextStyle(
@@ -47,10 +61,10 @@ class Categories extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              for (int i = 1; i < 30; i++)
+              for (var category in categories)
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  height: 50,
+                  height: 100, // Adjust the height as needed
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
@@ -67,7 +81,7 @@ class Categories extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.all(5),
                         child: Image.asset(
-                          "assets/images/3331-removebg-preview.png",
+                          category.imagePath,
                           height: 100,
                           width: 100,
                         ),
@@ -75,7 +89,7 @@ class Categories extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(right: 5),
                         child: Text(
-                          "Material Gifts",
+                          category.categoryName,
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
